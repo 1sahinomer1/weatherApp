@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { WeatherData } from "./utils/Type";
 import { Animated } from "react-animated-css";
 import { useSpring, animated } from "react-spring";
