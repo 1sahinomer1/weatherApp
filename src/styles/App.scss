@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+$primaryColor: linear-gradient(
+  to right,
+  rgba(41, 128, 185, 1),
+  rgba(41, 128, 185, 0.1)
+);
+$secondColor: rgba(250, 250, 250, 0.85);
+$thirdColor: rgba(226, 70, 70, 0.85);
+$m: 350px;
+$s: 280px;
+$xs: 200px;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font: 0.9em sans-serif;
+  background-image: $primaryColor;
+}
+
+#root {
+  height: 100%;
+}
+.App {
+  height: 100%;
+  width: 100%;
+  .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    input {
+      outline: none;
+      border-radius: 20px;
+      width: 25em;
+      height: 3em;
+      border: none;
+      background-color: $secondColor;
+      margin-top: 3em;
+      text-align: center;
+
+      @media screen and (max-width: $m) {
+        width: 20em;
+        height: 3em;
+      }
+      @media screen and (max-width: $s) {
+        width: 15em;
+        height: 3em;
+      }
+      @media screen and (max-width: $xs) {
+        width: 11em;
+        height: 3em;
+      }
+    }
+    input::placeholder {
+      text-align: center;
+    }
+    .city {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 4em;
+      margin-top: 4em;
+      border-radius: 2em;
+      background-color: $secondColor;
+      box-shadow: 10px 10px 5px 0px hsla(224, 84%, 63%, 0.404);
+      @media screen and (max-width: $m) {
+        margin-top: 3em;
+        padding: 1.5em;
+      }
+      @media screen and (max-width: $s) {
+        padding: 1em;
+      }
+      @media screen and (max-width: $xs) {
+        padding: 0em;
+      }
+      .cityName {
+        font-size: 2em;
+        @media screen and (max-width: $m) {
+          font-size: 1.5em;
+        }
+        @media screen and (max-width: $s) {
+          margin-top: 1em;
+          font-size: 1em;
+        }
+        sup {
+          padding: 0.2em 0.6em;
+          margin-left: 0.2em;
+          border-radius: 3em;
+          color: #fff;
+          background-color: $thirdColor;
+        }
+      }
+      .cityTemp {
+        font-size: 4em;
+        font-weight: bold;
+        margin-top: 1em;
+        text-align: center;
+        @media screen and (max-width: $m) {
+          font-size: 3em;
+        }
+        @media screen and (max-width: $s) {
+          font-size: 2em;
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .city-icon {
+          margin-top: 0.5em;
+          width: 8em;
+          height: 8em;
+          @media screen and (max-width: $m) {
+            width: 6em;
+            height: 6em;
+          }
+          @media screen and (max-width: $s) {
+            width: 4em;
+            height: 4em;
+          }
+        }
+        p {
+          margin-top: 1em;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          @media screen and (max-width: $m) {
+            font-size: 1em;
+          }
+          @media screen and (max-width: $s) {
+            font-size: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
