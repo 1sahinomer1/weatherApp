@@ -3,7 +3,9 @@ import { WeatherData } from "./utils/Type";
 import { Animated } from "react-animated-css";
 import { useSpring, animated } from "react-spring";
 import { AiFillGithub } from "react-icons/ai";
+
 import "./styles/App.scss";
+
 function App() {
   const API_KEY = "38ace56c0aa32b623cc52477ac42996b";
   const [cityName, setCityName] = useState();
@@ -29,7 +31,6 @@ function App() {
     );
     if (response.status === 200) {
       let weatherData: WeatherData = await response.json();
-
       setWeatherData(weatherData);
       weatherData.main.temp > 0 ? setColor("red") : setColor("blue");
     }
