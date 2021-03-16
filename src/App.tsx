@@ -27,7 +27,7 @@ function App() {
 
   const fetchWeather = async (cityName: string) => {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&lang=tr&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}&lang=tr&units=metric`
     );
     if (response.status === 200) {
       let weatherData: WeatherData = await response.json();
